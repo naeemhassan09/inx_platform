@@ -1,0 +1,1 @@
+cat /docker-entrypoint-initdb.d/scripts/create_platform_database.sh  | tr -d "\r" | bash -
