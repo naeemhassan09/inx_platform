@@ -22,3 +22,23 @@ On Mac,Windows and Linux, you should just be able to run a `docker-compose -f do
 
 #### To see the running docker containers
 `docker ps`
+
+#### To see the pulled images
+
+`docker images`
+
+#### List all containers (only IDs)
+
+`docker ps -aq`
+
+#### Stop all running containers
+
+`docker stop $(docker ps -aq)`
+
+#### Remove all containers
+
+`docker rm $(docker ps -aq)`
+
+#### Remove all images
+
+`docker rmi $(docker images -q)`
