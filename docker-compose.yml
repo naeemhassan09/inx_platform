@@ -68,3 +68,17 @@ services:
             CONNECT_INTERNAL_VALUE_CONVERTER: org.apache.kafka.connect.json.JsonConverter
             CONNECT_ZOOKEEPER_CONNECT: zookeeper:2181
             CONNECT_PLUGIN_PATH: /usr/share/java
+    mosquitto:
+        image: eclipse-mosquitto
+        hostname: mosquitto
+        container_name: mosquitto
+        networks:
+            - default
+        expose:
+            - "1883"
+            - "9001"
+        ports:
+            - "1883:1883"
+            - "9001:9001"
+        volumes:
+            - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf        
