@@ -204,7 +204,7 @@ services:
         ports:
             - 8080:8080
         depends_on:
-            - postgres
+            - postgres:12.4
     ## By default this config uses default local driver,
     ## For custom volumes replace with volume driver configuration.
 volumes:
