@@ -12,9 +12,6 @@ services:
             - POSTGRES_DB=inx_platform
             - POSTGRES_PASSWORD=password
             - POSTGRES_HOST=database
-            - POSTGRES_DB=keycloak
-            - POSTGRES_USER=keycloak
-            - POSTGRES_PASSWORD=password
         volumes:
             - /data:/var/lib/postgresql/data
         ports:
